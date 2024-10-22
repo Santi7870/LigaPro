@@ -5,15 +5,22 @@ namespace LigaPro.Models
 {
     public class Jugadores
     {
-       public int Id { get; set; }
-        [MaxLength(100)]
+        [key]
+        public int Id { get; set; }
+        [MaxLenght(150)]
 
         public string Nombre { get; set; }
+        [EmailAddress]
         public string Posicion { get; set; }
         public Equipo equipo { get; set; }
-        [ForeignKey("nombre")]
+
+        [ForeignKey("equipo")]
         public string Edad { get; set; }
+        
+
+        public int IdEquipo { get; set; }
 
 
     }
 }
+    
