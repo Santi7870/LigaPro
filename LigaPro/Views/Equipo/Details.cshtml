@@ -1,7 +1,14 @@
-<div class="details-page">
-    <h1>Details</h1>
+@model LigaPro.Models.Equipo
+
+@{
+    ViewData["Title"] = "Detalles del Equipo";
+}
+
+<div class="details-page"> <!-- Aplicamos la clase para el fondo degradado -->
+    <h1 class="text-center">DETALLES DEL EQUIPO</h1>
+
     <div>
-        <h4>Equipo</h4>
+        <h4 class="text-center">Información del Equipo</h4>
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
@@ -30,9 +37,12 @@
             </dd>
         </dl>
     </div>
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-        <a asp-action="Index">Back to List</a>
+
+    <div class="text-center">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Editar</a> <!-- Estiliza el enlace de editar -->
+        |
+        <a asp-action="Index" class="btn btn-link">Volver a la lista</a> <!-- Estiliza el enlace de regreso -->
     </div>
 </div>
+
 
