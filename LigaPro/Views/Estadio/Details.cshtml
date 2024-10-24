@@ -1,4 +1,4 @@
-﻿@model LigaPro.Models.Estadio
+@model LigaPro.Models.Estadio
 
 @{
     ViewData["Title"] = "Details";
@@ -6,31 +6,33 @@
 
 <h1>Details</h1>
 
-<div>
+<div class="details-page"> <!-- Añadir la clase details-page aquí -->
     <h4>Estadio</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Direccion)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Direccion)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Ciudad)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Ciudad)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Capacidad)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Capacidad)
         </dd>
     </dl>
 </div>
+
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="custom-btn">Edit</a> | <!-- Aplicar clase custom-btn para el botón -->
     <a asp-action="Index">Back to List</a>
 </div>
+
