@@ -1,49 +1,52 @@
-﻿@model LigaPro.Models.Jugadores
+@model LigaPro.Models.Jugadores
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<div class="edit-page"> <!-- Añadir la clase edit-page aquí para aplicar el fondo -->
+    <h1>Edit</h1>
 
-<h4>Jugadores</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Posicion" class="control-label"></label>
-                <input asp-for="Posicion" class="form-control" />
-                <span asp-validation-for="Posicion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Edad" class="control-label"></label>
-                <input asp-for="Edad" class="form-control" />
-                <span asp-validation-for="Edad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdEquipo" class="control-label"></label>
-                <input asp-for="IdEquipo" class="form-control" />
-                <span asp-validation-for="IdEquipo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4>Jugadores</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Posicion" class="control-label"></label>
+                    <input asp-for="Posicion" class="form-control" />
+                    <span asp-validation-for="Posicion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Edad" class="control-label"></label>
+                    <input asp-for="Edad" class="form-control" />
+                    <span asp-validation-for="Edad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IdEquipo" class="control-label"></label>
+                    <input asp-for="IdEquipo" class="form-control" />
+                    <span asp-validation-for="IdEquipo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="custom-btn" /> <!-- Aplicar clase custom-btn para el botón -->
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+    <div>
+        <a asp-action="Index" class="custom-btn">Back to List</a> <!-- Aplicar clase custom-btn para el botón -->
+    </div>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
